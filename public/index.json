@@ -1,0 +1,120 @@
+[
+{
+	"uri": "//localhost:1313/3-deployamazoncloudfront/3.1-create-a-bucket/",
+	"title": "Create a Bucket",
+	"tags": [],
+	"description": "",
+	"content": " Access Amazon S3 from the AWS Console through the S3 Management Interface. Click Create bucket. On the Create Bucket page: Provide a name (e.g., cloudfront-demo-bucket). Select ACLs enabled. Next: Uncheck Block all public access (if the content needs to be public). Finally, click Create bucket to create the bucket. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste-copy/2.1-createec2/2.1.1-createawsaccount/",
+	"title": "Create AWS Account",
+	"tags": [],
+	"description": "",
+	"content": "1. Create AWS Account (if you don\u0026rsquo;t have one) 1.1. Access AWS Console Go to the AWS Console. If you already have an AWS account, you can log in right away. If not, create a new account. 1.2. Register Account with Personal Email Select Create a new AWS account. Enter your personal email and a secure password. AWS requires the password to be at least 8 characters long and include uppercase letters, lowercase letters, and numbers. After filling in the registration details, you\u0026rsquo;ll need to enter your account name and personal information such as address and phone number. 1.3. Activate Account and Set Up Billing Activate the account:\nAWS will ask you for payment information (credit or debit card) to activate your account. This is required to pay for the services you use on AWS, although you’ll have a free trial package for the first 12 months. Enter your payment information and confirm your address. Account verification:\nAWS requires you to complete a security verification step through phone to protect your account. You will receive a PIN via phone to enter into the AWS Console. Choose a service plan:\nAfter verifying your account, you’ll be prompted to choose a service plan, which can be either the personal or business plan. Be sure to choose the Basic Support plan unless you want to use a paid support service. Complete registration:\nAfter completing registration and verification, you’ll receive a confirmation email from AWS. Your account will be activated and ready to use. Log in and use:\nLog in to the AWS Console using the newly created account and start deploying AWS services. "
+},
+{
+	"uri": "//localhost:1313/4-configureawswaftoprotectcloudfront/4.1-createcloudfront/",
+	"title": "Create CloudFront Distribution",
+	"tags": [],
+	"description": "",
+	"content": " Access Amazon CloudFront from the AWS Console management interface of Amazon CloudFront service. Click on Create a CloudFront Distribution. On the Create Distribution page. In the Origin, enter the information for the S3 Bucket as the origin. Next. In the Name, enter a name for the Distribution (ex: bucket-cloudfront-workshop). Click Legacy access identities Click Yes,updata the bucket policy Click Create new OAI Continue by selecting Create. In the Web Application Firewall (WAF). Click Enable securtity protetions. Finally, select Create Distribution. "
+},
+{
+	"uri": "//localhost:1313/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Amazon CloudFront is one of the leading Content Delivery Network (CDN) services, designed to deliver content to users quickly, securely, and reliably worldwide.\nIn today’s context, where page load speed and website performance are critical factors affecting user experience and business competitiveness, using CloudFront brings significant benefits to both web developers and businesses.\nBenefits of Using Amazon CloudFront: Faster Global Content Delivery Amazon CloudFront uses a network of Edge Locations around the world to deliver content closer to users, reducing page load times and improving user experience. Reduced Latency and Enhanced Performance Data is cached at edge locations, minimizing the number of requests sent directly to the origin server. This reduces server load and ensures stable performance. Support for Diverse Content CloudFront efficiently delivers both static content (images, videos, documents) and dynamic content (APIs, personalized data). Global Scalability With over 450 Edge Locations and Regional Edge Caches, Amazon CloudFront can easily scale to handle high traffic, meeting the needs of businesses of all sizes. Robust Security Integration with AWS WAF protects against threats like SQL Injection and Cross-Site Scripting (XSS). HTTPS support encrypts data and safeguards sensitive information. Origin Access Control (OAC) restricts access to content from CloudFront to the origin server only. Seamless Integration with AWS Easily integrates with other AWS services like Amazon S3, EC2, Lambda@Edge, and CloudWatch for monitoring, analysis, and optimization. Cost Optimization Pay-as-you-go pricing reduces operational costs through caching and offloading requests from the origin server. Support for High-Quality Video Content CloudFront is optimized for low-latency video streaming and supports HLS (HTTP Live Streaming) and DASH (Dynamic Adaptive Streaming). High Customizability With Lambda@Edge, you can customize data flow, perform actions like cookie inspection, header modification, or URL redirection at the Edge Locations. Effective Monitoring and Analytics Integration with Amazon CloudWatch enables performance tracking, traffic analysis, issue detection, and system optimization. High Reliability Built on AWS infrastructure, Amazon CloudFront ensures reliability with a 99.9% uptime SLA and automatic error detection and correction mechanisms. Support for Multi-Language and Regional Content With its global reach, CloudFront ensures fast content delivery to users in remote or network-constrained areas. With these advantages, Amazon CloudFront not only improves content delivery speed but also optimizes costs, enhances security, and ensures flexible scalability. It is an ideal solution for businesses aiming to enhance user experiences and maintain a competitive edge globally.\n"
+},
+{
+	"uri": "//localhost:1313/2-prerequiste-copy/2.1-createec2/",
+	"title": "Prepare AWS Environment",
+	"tags": [],
+	"description": "",
+	"content": "1. Create an AWS Account Access AWS Console and sign up for an account. Activate the account and set up billing. 2. Activate Necessary Services Amazon S3 Amazon CloudFront AWS WAF 3. Install CLI Tools Install AWS CLI. Configure CLI with Access Key and Secret Key. Content Create an AWS Account Activate Necessary Services Install CLI Tools "
+},
+{
+	"uri": "//localhost:1313/",
+	"title": "Session Management",
+	"tags": [],
+	"description": "",
+	"content": "Amazon CloudFront: Deploying a Global CDN to Accelerate Website Performance Overall In this lab, you\u0026rsquo;ll learn an overview of Amazon CloudFront, the benefits of using a CDN (Content Delivery Network), and how it can help optimize website loading speed.\nContent Introduction Preparation Deploy Amazon CloudFront Configure AWS WAF to Protect CloudFront Testing and Demo Clean up resources "
+},
+{
+	"uri": "//localhost:1313/4-configureawswaftoprotectcloudfront/4.2-activatecloudfront/",
+	"title": "Activate CloudFront",
+	"tags": [],
+	"description": "",
+	"content": " Save the configuration and wait for the Distribution status to change to \u0026ldquo;Deployed\u0026rdquo;. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste-copy/2.1-createec2/2.1.2-activatenecessaryservices/",
+	"title": "Activate Necessary Services",
+	"tags": [],
+	"description": "",
+	"content": "2. Activate Necessary Services Amazon S3:\nAccess the AWS Console and activate the S3 service. Amazon CloudFront:\nAccess the AWS Console and activate the CloudFront service to distribute content. AWS WAF:\nAccess the AWS Console and activate the Web Application Firewall (WAF) service to protect your application. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste-copy/",
+	"title": "Preparation Steps",
+	"tags": [],
+	"description": "",
+	"content": "To learn how to create Amazon S3 and Amazon CloudFront with public/private subnets, you can refer to the following lab guides:\nIntroduction to Amazon S3 Working with Amazon CloudFront Content Prepare S3 and Amazon CloudFront "
+},
+{
+	"uri": "//localhost:1313/3-deployamazoncloudfront/3.2-uploadcontenttothebucket/",
+	"title": "Upload Content to the Bucket",
+	"tags": [],
+	"description": "",
+	"content": " Upload HTML, CSS, JS, or demo image files. Click Upload. Set public permissions for the files (if necessary). Select the files you want to make public. Click Actions. In Actions, click Make public using ACL. Next, on the Make Public page: Click Make public. "
+},
+{
+	"uri": "//localhost:1313/3-deployamazoncloudfront/",
+	"title": "Create and Configure an Amazon S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "In this step, we will connect to our EC2 servers, located in both the public and private subnets.\nContent 3.1. Connect to EC2 Public Server 3.2. Cconnect to EC2 Private Server\n"
+},
+{
+	"uri": "//localhost:1313/2-prerequiste-copy/2.1-createec2/2.1.3-installclitools/",
+	"title": "Install CLI Tools",
+	"tags": [],
+	"description": "",
+	"content": "3. Install CLI Tools 3.1. Download and Install AWS Command Line Interface (CLI) Visit the AWS CLI Download page.\nDownload the appropriate version of AWS CLI for your operating system:\nWindows: Download and install the .msi file from the AWS download page. macOS: Use Homebrew to install the CLI, or download the .pkg file from the AWS download page. Linux: Install AWS CLI through terminal commands like curl or apt-get (depending on your distribution). After downloading, run the installer and follow the on-screen instructions to complete the installation.\n3.2. Configure CLI using aws configure with Access Key and Secret Key from AWS IAM Open a terminal (Command Prompt on Windows, Terminal on macOS/Linux).\nRun the following command to configure AWS CLI:\nThe system will prompt you to enter the following details:\nAWS Access Key ID: Enter the Access Key you created from IAM in the AWS Console.\nAWS Secret Access Key: Enter the Secret Key you created from IAM.\nDefault region name: Enter the default region you want to use for AWS services (e.g., us-west-2).\nDefault output format: Choose the output format (json, text, or table). Typically, select json for easy use.\nOnce completed, AWS CLI will be configured and ready to use.\n"
+},
+{
+	"uri": "//localhost:1313/4-configureawswaftoprotectcloudfront/",
+	"title": "Deploy Amazon CloudFront",
+	"tags": [],
+	"description": "",
+	"content": "With Amazon CloudFront, you can optimize page load speed and secure content on your website. In this section, we will go through the steps to deploy CloudFront for content distribution and optimize the performance of your resources.\nContents: Create CloudFront Distribution Activate CloudFront "
+},
+{
+	"uri": "//localhost:1313/5-testinganddemo/",
+	"title": "Testing and Demo",
+	"tags": [],
+	"description": "",
+	"content": " Check content load speed:\nUse a browser to access the CloudFront URL:\nAccess the CloudFront URL (provided when you create the CloudFront Distribution) through your browser to check if the content is being served correctly from CloudFront. The URL will look like d12345abcde.cloudfront.net.\nMeasure load speed from different locations:\nYou can check the load speed from different regions around the world to see how well CloudFront performs. Use the following online tools:\nPingdom:\nVisit Pingdom and enter the CloudFront URL to check the load speed from different locations. GTmetrix:\nVisit GTmetrix and enter the CloudFront URL to test the page load performance from global locations. This tool provides metrics such as page load time, server response speed, and performance score. Steps to use GTmetrix:\nGo to the GTmetrix website. Enter the CloudFront URL into the search bar and click Test your site. Choose the Test Location to test from different countries or regions. Wait a few minutes for the tool to measure and analyze the page load time. Review metrics such as Page Speed Score, Fully Loaded Time, Total Page Size, and Requests to assess CloudFront\u0026rsquo;s performance. Analyze the results:\nCompare the page load time from nearby and distant regions. CloudFront will help reduce page load times from remote locations by caching content at edge locations closer to the end users. If there are delays, review your CloudFront configuration, such as cache settings, or check if there are any issues with content distribution from the origin. "
+},
+{
+	"uri": "//localhost:1313/6-cleanup/",
+	"title": "Clean up resources",
+	"tags": [],
+	"description": "",
+	"content": "Delete the Resources We Created After completing the deployment and testing of Amazon CloudFront, if you wish to clean up and delete the resources created during the practice, follow these steps to ensure the resources are removed and avoid being charged for unnecessary ones.\nDelete the CloudFront Distribution:\nGo to the AWS Management Console and navigate to CloudFront. Find and select the CloudFront Distribution that you created during the practice. Click on Actions and select Disable to disable the distribution. Once the distribution status changes to Disabled, click Delete to permanently delete the distribution. Delete the S3 Bucket:\nGo to Amazon S3 in the AWS Management Console. Select the S3 Bucket you used as the origin in CloudFront. Ensure that the bucket is empty (delete all objects within the bucket). After the bucket is empty, click Delete and confirm to delete the bucket. Delete the AWS Web Application Firewall (WAF):\nGo to AWS WAF in the AWS Management Console. Select Web ACLs and find the Web ACL you created to protect CloudFront. Click Delete to remove the Web ACL and all associated protection rules. Delete CloudWatch Log Group:\nGo to Amazon CloudWatch in the AWS Management Console. Select Logs from the left menu and find the Log Group created to monitor CloudFront logs. Select the corresponding Log Group and click Delete to remove the log group. Delete Other Resources (if applicable):\nIf you created any other resources during the practice, such as CloudFront SSL certificates, IAM roles, or other related resources, ensure they are also deleted. Make sure that all unnecessary resources are removed to prevent any ongoing charges. Conclusion: Once these steps are completed, all the resources you created during this practice will be deleted, and you will no longer incur charges for unused resources. This is an important step to clean up your working environment and ensure efficient AWS resource management.\n"
+},
+{
+	"uri": "//localhost:1313/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

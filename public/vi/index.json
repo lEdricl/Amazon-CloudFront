@@ -1,0 +1,120 @@
+[
+{
+	"uri": "//localhost:1313/vi/2-prerequiste-copy/2.1-createec2/",
+	"title": "Chuẩn Bị Môi Trường AWS",
+	"tags": [],
+	"description": "",
+	"content": "1. Tạo tài khoản AWS Truy cập AWS Console và đăng ký tài khoản. Kích hoạt tài khoản và thiết lập thanh toán. 2. Kích hoạt các dịch vụ cần thiết Amazon S3 Amazon CloudFront AWS WAF 3. Cài đặt công cụ CLI Cài đặt AWS CLI. Cấu hình CLI với Access Key và Secret Key. Nội dung Tạo tài khoản AWS Kích hoạt các dịch vụ cần thiết Cài Đặt Công Cụ CLI "
+},
+{
+	"uri": "//localhost:1313/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Amazon CloudFront là một trong những dịch vụ Content Delivery Network (CDN) hàng đầu, được thiết kế để cung cấp nội dung đến người dùng một cách nhanh chóng, bảo mật và đáng tin cậy trên toàn thế giới.\nTrong bối cảnh hiện nay, khi tốc độ tải trang và hiệu suất website là những yếu tố quan trọng ảnh hưởng đến trải nghiệm người dùng và khả năng cạnh tranh của doanh nghiệp, việc sử dụng CloudFront mang lại những lợi ích đáng kể cho cả nhà phát triển web lẫn doanh nghiệp.\nLợi ích của việc sử dụng Amazon CloudFront: Tăng tốc độ tải nội dung toàn cầu\nAmazon CloudFront sử dụng mạng lưới Edge Locations trên toàn thế giới để phân phối nội dung gần người dùng nhất, giảm thời gian tải trang và cải thiện trải nghiệm người dùng. Giảm độ trễ và tăng hiệu suất\nDữ liệu được lưu trữ tạm thời (cache) tại các điểm biên, giúp giảm số lượng yêu cầu trực tiếp đến máy chủ gốc, giảm tải cho hệ thống và đảm bảo hiệu suất ổn định. Hỗ trợ nội dung đa dạng\nCloudFront có khả năng phân phối hiệu quả cả nội dung tĩnh (ví dụ: hình ảnh, video, tài liệu) và nội dung động (ví dụ: API, dữ liệu cá nhân hóa). Khả năng mở rộng toàn cầu\nVới hơn 450 Edge Locations và Regional Edge Caches, CloudFront dễ dàng mở rộng để đáp ứng lưu lượng truy cập tăng cao, phù hợp với nhu cầu của doanh nghiệp ở mọi quy mô. Bảo mật mạnh mẽ\nTích hợp với AWS WAF để bảo vệ khỏi các mối đe dọa như SQL Injection, Cross-Site Scripting (XSS). Hỗ trợ HTTPS để mã hóa dữ liệu và bảo vệ thông tin nhạy cảm. Sử dụng Origin Access Control (OAC) để giới hạn truy cập chỉ từ CloudFront đến nguồn gốc. Tích hợp liền mạch với AWS\nDễ dàng kết nối với các dịch vụ AWS khác như Amazon S3, EC2, Lambda@Edge, và CloudWatch để giám sát, phân tích, và tối ưu hóa hệ thống. Chi phí tối ưu\nChỉ trả tiền theo lưu lượng sử dụng thực tế, giúp tiết kiệm chi phí vận hành nhờ cơ chế caching và giảm tải cho máy chủ nguồn gốc. Hỗ trợ phát trực tuyến video chất lượng cao\nCloudFront được tối ưu để phân phối nội dung video với độ trễ thấp, hỗ trợ các định dạng HLS (HTTP Live Streaming) và DASH (Dynamic Adaptive Streaming). Khả năng tùy chỉnh cao\nVới Lambda@Edge, bạn có thể tùy chỉnh luồng dữ liệu, thực hiện các thay đổi như kiểm tra cookie, chỉnh sửa header, hoặc chuyển hướng URL ngay tại các Edge Locations. Giám sát và phân tích hiệu quả\nTích hợp với Amazon CloudWatch để theo dõi hiệu suất và lưu lượng, phát hiện các vấn đề tiềm ẩn và tối ưu hóa hệ thống. Độ tin cậy cao\nĐược xây dựng trên cơ sở hạ tầng AWS, CloudFront đảm bảo độ tin cậy với SLA 99.9% uptime, cùng cơ chế tự động phát hiện và sửa lỗi. Hỗ trợ nội dung đa ngôn ngữ và khu vực\nVới phạm vi phủ sóng toàn cầu, CloudFront đảm bảo phân phối nội dung nhanh chóng đến người dùng tại các khu vực xa xôi hoặc có cơ sở hạ tầng mạng hạn chế. Với những lợi ích này, Amazon CloudFront không chỉ cải thiện tốc độ tải nội dung mà còn tối ưu hóa chi phí, tăng cường bảo mật, và đảm bảo khả năng mở rộng linh hoạt. Đây là giải pháp lý tưởng cho các doanh nghiệp muốn nâng cao trải nghiệm người dùng và duy trì lợi thế cạnh tranh trên toàn cầu.\n"
+},
+{
+	"uri": "//localhost:1313/vi/",
+	"title": "Session Management",
+	"tags": [],
+	"description": "",
+	"content": "Amazon CloudFront: Triển khai CDN để tăng tốc độ tải trang web trên toàn cầu. Tổng quan Trong bài lab này, bạn se tìm hiểu tổng quan về Amazon CloudFront, các lợi ích của việc sử dụng CDN (Content Delivery Network), và cách nó giúp tối ưu hóa tốc độ tải trang web.\nNội dung Giới thiệu Các bước chuẩn bị Triển Khai Amazon CloudFront Cấu Hình AWS WAF để Bảo Vệ CloudFront Kiểm Tra và Demo Dọn dẹp tài nguyên "
+},
+{
+	"uri": "//localhost:1313/vi/3-deployamazoncloudfront/3.1-create-a-bucket/",
+	"title": "Tạo bucket",
+	"tags": [],
+	"description": "",
+	"content": " Truy cập Amazon S3 từ AWS Console giao diện quản trị của dịch vụ S3 . Click chọn Create bucket . Tại trang Create bucket. Đặt tên (ví dụ: cloudfront-demo-bucket). Click chọn ACLs enabled. Tiếp theo Click bỏ chọn Block all public access (nếu nội dung cần công khai). Sau đó chọn Create bucket để tạo bucket. "
+},
+{
+	"uri": "//localhost:1313/vi/4-configureawswaftoprotectcloudfront/4.1-createcloudfront/",
+	"title": "Tạo CloudFront Distribution",
+	"tags": [],
+	"description": "",
+	"content": " Truy cập Amazon CloudFront từ AWS Console giao diện quản trị của dịch vụ Amazon CloudFront . Click chọn Create a CloudFront Distribution. Ở trang Create Distribution. Ở mục Origin, nhập thông tin S3 Bucket làm nguồn gốc (Origin). tiếp theo. Ở mục Name, nhập tên cho Distribution (ví dụ:bucket-cloudfront-workshop). Click chọn Legacy access identities Click chọn Yes,updata the bucket policy Click chọn Create new OAI tiếp tục chọn Create. Ở mụcWeb Application Firewall (WAF). Click chọn Enable securtity protetions. Cuối cùng chọn Create Distribution. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste-copy/2.1-createec2/2.1.1-createawsaccount/",
+	"title": "Tạo tài khoản AWS ",
+	"tags": [],
+	"description": "",
+	"content": "1. Tạo tài khoản AWS (nếu bạn chưa có) 1.1. Truy cập AWS Console Truy cập vào AWS Console. Nếu bạn đã có tài khoản AWS, bạn có thể đăng nhập vào tài khoản của mình ngay lập tức. Nếu chưa có tài khoản, hãy tạo một tài khoản mới. 1.2. Đăng ký tài khoản bằng email cá nhân Chọn Create a new AWS account (Tạo tài khoản AWS mới). Nhập email cá nhân của bạn và một mật khẩu an toàn. AWS yêu cầu mật khẩu phải có ít nhất 8 ký tự và bao gồm cả chữ hoa, chữ thường và số. Sau khi nhập thông tin đăng ký, bạn sẽ cần nhập tên tài khoản và các thông tin cá nhân như địa chỉ và số điện thoại. 1.3. Kích hoạt tài khoản và thiết lập thanh toán Kích hoạt tài khoản:\nAWS sẽ yêu cầu bạn cung cấp thông tin thanh toán (thẻ tín dụng hoặc thẻ ghi nợ) để kích hoạt tài khoản. Điều này cần thiết để thanh toán cho các dịch vụ mà bạn sử dụng trên AWS, mặc dù bạn sẽ có một gói dùng thử miễn phí trong 12 tháng đầu. Nhập thông tin thanh toán và xác nhận địa chỉ. Xác thực tài khoản:\nAWS yêu cầu bạn thực hiện một bước xác minh bảo mật qua điện thoại để bảo vệ tài khoản của bạn. Bạn sẽ nhận được một mã PIN qua điện thoại để nhập vào AWS Console. Chọn gói sử dụng dịch vụ:\nSau khi xác thực tài khoản, bạn sẽ được yêu cầu chọn một gói sử dụng dịch vụ, có thể là gói cá nhân hoặc gói doanh nghiệp. Đảm bảo chọn gói Basic Support (hỗ trợ cơ bản), trừ khi bạn muốn sử dụng dịch vụ hỗ trợ trả phí. Hoàn tất đăng ký:\nSau khi hoàn tất đăng ký và xác nhận, bạn sẽ nhận được một email xác nhận từ AWS. Tài khoản của bạn đã được kích hoạt và sẵn sàng sử dụng. Đăng nhập và sử dụng:\nĐăng nhập vào AWS Console bằng tài khoản mới tạo và bắt đầu triển khai các dịch vụ AWS. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste-copy/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Để tìm hiểu cách tạo các S3 và Amazon CloudFront với public/private subnet các bạn có thể tham khảo bài lab :\nGiới thiệu về Amazon S3 Làm việc với Amazon CloudFront Nội dung Chuẩn bị S3 và Amazon CloudFront "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste-copy/2.1-createec2/2.1.2-activatenecessaryservices/",
+	"title": "Kích hoạt các dịch vụ cần thiết",
+	"tags": [],
+	"description": "",
+	"content": "2. Kích hoạt các dịch vụ cần thiết Amazon S3:\nTruy cập AWS Console và kích hoạt dịch vụ S3. Amazon CloudFront:\nTruy cập AWS Console và kích hoạt dịch vụ CloudFront để phân phối nội dung. AWS WAF:\nTruy cập AWS Console và kích hoạt dịch vụ Web Application Firewall (WAF) để bảo vệ ứng dụng của bạn. "
+},
+{
+	"uri": "//localhost:1313/vi/4-configureawswaftoprotectcloudfront/4.2-activatecloudfront/",
+	"title": "Kích hoạt CloudFront",
+	"tags": [],
+	"description": "",
+	"content": " Lưu cấu hình và đợi trạng thái Distribution chuyển sang \u0026ldquo;Deployed\u0026rdquo;. "
+},
+{
+	"uri": "//localhost:1313/vi/3-deployamazoncloudfront/3.2-uploadcontenttothebucket/",
+	"title": "Tải nội dung lên bucket",
+	"tags": [],
+	"description": "",
+	"content": " Tải lên các tệp HTML, CSS, JS hoặc hình ảnh demo. Click chọn Upload. Thiết lập quyền public cho các tệp (nếu cần). Click chọn các tệp muốn public. Click chọn Actions. Trong Actions click chọn Make public using AlCL Tiếp theo trong trang Make public. Click chọn Make public. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste-copy/2.1-createec2/2.1.3-installclitools/",
+	"title": "Cài Đặt Công Cụ CLI",
+	"tags": [],
+	"description": "",
+	"content": "3. Cài đặt công cụ CLI 3.1. Tải và cài đặt AWS Command Line Interface (CLI) Truy cập trang Tải AWS CLI.\nTải phiên bản AWS CLI phù hợp với hệ điều hành của bạn:\nWindows: Tải và cài đặt file .msi từ trang tải về của AWS. macOS: Dùng Homebrew để cài đặt CLI, hoặc tải file .pkg từ trang tải của AWS. Linux: Cài đặt AWS CLI thông qua các lệnh terminal như curl hoặc apt-get (tùy theo bản phân phối). Sau khi tải về, chạy file cài đặt và làm theo hướng dẫn trên màn hình để hoàn tất quá trình cài đặt.\n3.2. Cấu hình CLI bằng lệnh aws configure với Access Key và Secret Key từ AWS IAM Mở terminal (Command Prompt trên Windows, Terminal trên macOS/Linux). Chạy lệnh sau để cấu hình AWS CLI: Hệ thống sẽ yêu cầu bạn nhập các thông tin sau: AWS Access Key ID: Nhập Access Key mà bạn đã tạo từ IAM trong AWS Console. AWS Secret Access Key: Nhập Secret Key mà bạn đã tạo từ IAM. Default region name: Nhập khu vực (Region) mặc định mà bạn muốn sử dụng cho các dịch vụ AWS (ví dụ: us-west-2). Default output format: Chọn định dạng xuất ra (json, text, hoặc table). Thường chọn json cho định dạng dễ sử dụng. Sau khi hoàn thành, AWS CLI sẽ được cấu hình và sẵn sàng sử dụng.\n"
+},
+{
+	"uri": "//localhost:1313/vi/3-deployamazoncloudfront/",
+	"title": "Tạo và Định Cấu Hình Amazon S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ thực hiện tạo và định cấu hình Amazon S3 Bucket.\nNội dung 3.1. Tạo bucket 3.2. Tải nội dung lên bucket\n"
+},
+{
+	"uri": "//localhost:1313/vi/4-configureawswaftoprotectcloudfront/",
+	"title": "Triển Khai Amazon CloudFront",
+	"tags": [],
+	"description": "",
+	"content": "Với Amazon CloudFront, bạn có thể tối ưu tốc độ tải trang và bảo mật nội dung trên website. Trong phần này, chúng ta sẽ thực hiện các bước triển khai CloudFront để phân phối nội dung và tối ưu hóa hiệu suất của các tài nguyên.\nNội dung: Tạo CloudFront Distribution Kích hoạt CloudFront "
+},
+{
+	"uri": "//localhost:1313/vi/5-testinganddemo/",
+	"title": "Kiểm Tra và Demo",
+	"tags": [],
+	"description": "",
+	"content": " Kiểm tra tốc độ tải nội dung:\nSử dụng trình duyệt để truy cập URL CloudFront:\nTruy cập vào URL CloudFront (được cung cấp khi bạn tạo CloudFront Distribution) bằng trình duyệt của bạn để kiểm tra xem nội dung có được phân phối đúng từ CloudFront không. URL sẽ có dạng như d12345abcde.cloudfront.net.\nĐo tốc độ tải từ các địa điểm khác nhau: Bạn có thể kiểm tra tốc độ tải từ các khu vực khác nhau trên thế giới để xem hiệu suất của CloudFront có tối ưu không. Sử dụng các công cụ trực tuyến sau:\nPingdom:\nTruy cập Pingdom và nhập URL CloudFront để kiểm tra tốc độ tải từ các địa điểm khác nhau. GTmetrix:\nTruy cập GTmetrix và nhập URL CloudFront để kiểm tra hiệu suất tải trang từ các địa điểm toàn cầu. Công cụ này cung cấp các chỉ số như thời gian tải trang, tốc độ phản hồi của máy chủ và điểm hiệu suất. Các bước sử dụng công cụ GTmetrix:\nTruy cập vào trang GTmetrix. Nhập URL CloudFront vào ô tìm kiếm và nhấn Test your site. Chọn Test Location để kiểm tra từ các quốc gia hoặc khu vực khác nhau. Đợi vài phút để công cụ đo lường và phân tích tốc độ tải trang. Kiểm tra các chỉ số như Page Speed Score, Fully Loaded Time, Total Page Size, và Requests để đánh giá hiệu quả của CloudFront. Phân tích kết quả:\nSo sánh thời gian tải trang từ các khu vực gần và xa. CloudFront sẽ giúp giảm thời gian tải trang từ các vị trí xa bằng cách lưu trữ các bản sao của nội dung tại các edge locations gần người dùng cuối. Nếu có sự chậm trễ, kiểm tra lại cấu hình của CloudFront, chẳng hạn như cache settings, hoặc nếu có vấn đề với việc phân phối nội dung từ origin. "
+},
+{
+	"uri": "//localhost:1313/vi/6-cleanup/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Xóa Các Tài Nguyên Chúng Ta Đã Tạo Sau khi hoàn thành việc triển khai và thử nghiệm Amazon CloudFront, nếu bạn muốn dọn dẹp và xóa các tài nguyên đã tạo, hãy thực hiện các bước sau để đảm bảo rằng các tài nguyên không còn tồn tại và bạn không bị tính phí cho những tài nguyên không cần thiết.\nXóa CloudFront Distribution:\nTruy cập vào AWS Management Console và vào CloudFront. Tìm và chọn CloudFront Distribution mà bạn đã tạo trong quá trình thực hành. Chọn Actions và sau đó chọn Disable để vô hiệu hóa distribution. Sau khi trạng thái của distribution chuyển thành Disabled, chọn Delete để xóa hoàn toàn distribution. Xóa S3 Bucket:\nTruy cập vào Amazon S3 trong AWS Management Console. Chọn S3 Bucket mà bạn đã sử dụng làm origin trong CloudFront. Đảm bảo rằng bucket đã được rỗng (delete tất cả các đối tượng trong bucket). Sau khi bucket trống, chọn Delete và xác nhận để xóa bucket. Xóa AWS Web Application Firewall (WAF):\nTruy cập vào AWS WAF trong AWS Management Console. Chọn Web ACLs và tìm Web ACL mà bạn đã tạo để bảo vệ CloudFront. Chọn Delete để xóa Web ACL và tất cả các quy tắc bảo vệ đã cấu hình. Xóa CloudWatch Log Group:\nTruy cập vào Amazon CloudWatch trong AWS Management Console. Chọn Logs từ menu bên trái và tìm Log Group mà bạn đã tạo để theo dõi các log từ CloudFront. Chọn Log Group tương ứng và chọn Delete để xóa log group. Xóa Các Tài Nguyên Khác (nếu có):\nNếu bạn đã tạo các tài nguyên khác trong quá trình thực hành, chẳng hạn như các CloudFront SSL Certificates, IAM roles, hoặc các resource liên quan, hãy đảm bảo rằng chúng cũng được xóa. Đảm bảo rằng tất cả các tài nguyên không cần thiết đã được xóa để tránh bị tính phí. Kết luận: Sau khi thực hiện các bước trên, tất cả các tài nguyên mà bạn đã tạo trong bài thực hành này sẽ được xóa và bạn sẽ không còn bị tính phí cho những tài nguyên không sử dụng nữa. Đây là bước quan trọng để dọn dẹp môi trường làm việc của bạn và đảm bảo việc quản lý tài nguyên AWS hiệu quả.\n"
+},
+{
+	"uri": "//localhost:1313/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
